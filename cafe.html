@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="icon" href="img/logoblanco.png">
     <title>Carta de Cafes</title>
   </head>
   <body>
+    <header class="header">
+      <img class="logo" src="img/logo.png" alt="">
+      <button class="abrir-menu" id="abrir" ><i class="bi bi-list"></i></button>
+      <nav class="nav" id="nav">
+          <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></i></button>
+          <ul class="nav-list">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="carta.html">Carta</a></li>
+              <li><a href="cafe.html">Cafes</a></li>
+              <li><a href="#">Contactanos</a></li>
+          </ul>
+      </nav>
+  </header>
+  <script src="js/header.js"></script>
     <center>
       <div class="menu">
         <img src="img/cafes/cafe1.png" alt="" />
@@ -29,11 +45,6 @@
       <div class="texto">
           <!-- alt + 184 (©) --> 
           © 2025 | Dulce Colibri
-      </div>
-      <div class="pie-pagina-img">
-        <a href="index.html">
-          <img src="img/logoblanco.png" alt="100px">
-        </a>
       </div>
       <div class="pie-pagina-social">
           <a href="https://www.instagram.com/_dulcecolibri._/">
