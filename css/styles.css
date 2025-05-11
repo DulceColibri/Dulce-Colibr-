@@ -16,60 +16,6 @@ body {
     font-size: 16px;
     background: #e8e8e8;
   }
-  .pie-pagina {
-    margin-top: 60px;
-    background-color:#9b9290;
-    padding: 2rem 4rem;
-    text-align: center;
-}
-
-.social li {
-  margin-top: 10px;
-  display: inline;
-  margin: 20px;
-}
-
-svg {
-  width: 30px; /* Ajusta el tamaño */
-  height: 30px; /* Ajusta el tamaño */
-  fill:  white; /* Cambia el color del ícono */
-}
-.pie-pagina {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  flex-wrap: wrap; /* Permite que los elementos se reorganicen en líneas */
-}
-
-.pie-pagina div {
-  flex: 1;
-  text-align: center;
-  margin: 10px; /* Añade espacio entre los elementos */
-}
-
-.pie-pagina-img img {
-  max-width: 25px;
-  height: auto;
-}
-
-/* Media Query para dispositivos móviles */
-@media (max-width: 768px) {
-  .pie-pagina {
-    flex-direction: column; /* Cambia la dirección a columna */
-    text-align: center;     /* Centra los elementos */
-  }
-
-  .pie-pagina div {
-    flex: unset; /* Quita el crecimiento automático para columnas */
-  }
-}
-
-  .texto {
-    font-size: large;
-  }
 
   .flex {
     display: flex;
@@ -103,3 +49,66 @@ svg {
       max-width: 500px; /* Cambia el ancho máximo en pantallas más grandes */
     }
   }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 20%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  .card img {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+
+    animation-name: show;
+
+    animation-range: entry 25% cover 45%;
+    animation-fill-mode: both;
+  }
+
+  .menu img {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+
+    animation-name: show;
+
+    animation-range: entry 25% cover 45%;
+    animation-fill-mode: both;
+  }
+
+-------------------------------------------------------
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  transition: opacity 0.3s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  text-align: center;
+}
